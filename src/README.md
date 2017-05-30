@@ -2,7 +2,7 @@ Folder for your bot
 --------------------
 
 Create folder: `mkdir my-first-recast-chatbot`
-Go to your folder: `cd my-first-recast-chatbot`
+*Go to your folder: `cd my-first-recast-chatbot`*
 
 Clone the repository
 --------------------
