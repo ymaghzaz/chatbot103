@@ -167,7 +167,7 @@ export default async function yes(res, payload) {
 Call to services
 --------------------
 
-In order the bot to use services, add in after line 11 `src/index.js`
+In order the bot to use services, add after line 11 in `src/index.js`
 
 ```
 /* call to services */
