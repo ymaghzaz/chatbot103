@@ -37,6 +37,8 @@ const actions = {
 Create show language service
 --------------------
 
+Create file: `touch src/actions/show-language.js`
+
 Copy/Paste the following code to create the language service
 
 ```
@@ -62,6 +64,8 @@ export default async function showLanguage(res) {
 
 Create trending forks service
 --------------------
+
+Create file: `touch src/actions/trending-forks.js`
 
 Copy/Paste the following code to create the trending forks service
 
@@ -103,6 +107,8 @@ export default async function trendingForks(res) {
 Create trending stars service
 --------------------
 
+Create file: `touch src/actions/trending-stars.js`
+
 Copy/Paste the following code to create the trending stars service
 
 ```
@@ -142,6 +148,8 @@ export default async function trendingStars(res) {
 
 Create laugh service
 --------------------
+
+Create file: `touch src/actions/laugh.js`
 
 Copy/Paste the following code to create the laught service
 
