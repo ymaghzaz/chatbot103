@@ -38,15 +38,6 @@ const actions = {
 ```
 in `src/index.js` add the following code
 
-```
-const actions = {
-  'trending-stars': require('./trending-stars'),
-  'trending-forks': require('./trending-forks'),
-  'show-language': require('./show-language'),
-  'laugh': require('./laugh'),
-}
-```
-
 Create show language service
 --------------------
 
@@ -75,6 +66,37 @@ export default async function showLanguage(res) {
 }
 ```
 
+
+Call to services
+--------------------
+
+In order the bot to use services, add after line 11 in `src/index.js`
+
+```
+/* call to services */
+if (actions[currentAction]) {
+    console.log('Enter action')
+    replies = await actions[currentAction].default(res, payload)
+}    
+```
+
+## Fork the bot on Github and Recast.AI
+
+1. Make sure you are logged in to your [Github account](https://github.com/) and fork this repository
+1. Make sure you are logged in to your [Recast.AI account](https://recast.ai/)
+1. Follow this link [Github Bot](https://recast.ai/pe/obaw-0x0008-github/train) and fork the bot to your account
+
+## Connect your bot to Messenger with Bot Connector
+
+1. In the `Run` tab under the `Bot Connector` section follow the steps to connect your bot to `Messenger`
+
+## Host your bot with Bot Hosting
+
+1. In the `Run` tab under the `Bot Hosting` section link your [Github](https://github.com/) account to your [Recast.AI account](https://recast.ai/)
+1. Select the `OBAW-0x0008-Github` repository and click deploy
+
+
+## Other services
 Create trending forks service
 --------------------
 
@@ -184,34 +206,6 @@ export default async function yes(res, payload) {
   return replies
 }
 ```
-
-Call to services
---------------------
-
-In order the bot to use services, add after line 11 in `src/index.js`
-
-```
-/* call to services */
-if (actions[currentAction]) {
-    console.log('Enter action')
-    replies = await actions[currentAction].default(res, payload)
-}    
-```
-
-## Step 1: Fork the bot on Github and Recast.AI
-
-1. Make sure you are logged in to your [Github account](https://github.com/) and fork this repository
-1. Make sure you are logged in to your [Recast.AI account](https://recast.ai/)
-1. Follow this link [Github Bot](https://recast.ai/pe/obaw-0x0008-github/train) and fork the bot to your account
-
-## Step 2: Connect your bot to Messenger with Bot Connector
-
-1. In the `Run` tab under the `Bot Connector` section follow the steps to connect your bot to `Messenger`
-
-## Step 3: Host your bot with Bot Hosting
-
-1. In the `Run` tab under the `Bot Hosting` section link your [Github](https://github.com/) account to your [Recast.AI account](https://recast.ai/)
-1. Select the `OBAW-0x0008-Github` repository and click deploy
 
 You're all set !
 
