@@ -14,9 +14,9 @@ Add services for our GitHub chatbot
 
 in `src/index.js` add the following code
 
-`const actions = {
+```const actions = {
   'trending-stars': require('./trending-stars'),
   'trending-forks': require('./trending-forks'),
   'show-language': require('./show-language'),
   'laugh': require('./laugh'),
-}`
+}```
